@@ -20,4 +20,5 @@ jobs:
           chmod 777 sunny
           nohup ./sunny clientid $NGROK &
           aria2c -x 16 -s 16 https://github.com/gfdgd-xi/deepin-community-live-cd/releases/download/2.0.0-iso/deepin-live-cd-commiunty-2.0.0-debian_amd64.iso
-          kvm --vnc :1 --cdrom deepin-live-cd-commiunty-2.0.0-debian_amd64.iso -m 4G -cpu host -smp 2
+          sudo modprobe kvm | true
+          kvm --vnc :1 --cdrom deepin-live-cd-commiunty-2.0.0-debian_amd64.iso -m 4G -smp 2
