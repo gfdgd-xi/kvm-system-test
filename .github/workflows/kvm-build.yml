@@ -1,0 +1,22 @@
+name: KVM VNC
+run-name: ${{ github.actor }} KVM VNC 🚀
+on:
+#  schedule:
+#    - cron: '0 3 * * *'
+  workflow_dispatch:
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run KVM
+        env: 
+          NGROK: ${{ secrets.NGROK }}
+        run: |
+          # 配置编译容器
+          sudo apt update
+          sudo apt install git qemu-system qemu-system-gui -y
+          git clone https://github.com/gfdgd-xi/kvm-system-test --depth=1
+          cd kvm-system-test
+          chmod 777 sunny
+          nohup ./sunny clientid $NGROK &
+          kvm --vnc :1
