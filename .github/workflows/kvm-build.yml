@@ -14,9 +14,10 @@ jobs:
         run: |
           # 配置编译容器
           sudo apt update
-          sudo apt install git qemu-system qemu-system-gui -y
+          sudo apt install git qemu-system qemu-system-gui aria2 -y
           git clone https://github.com/gfdgd-xi/kvm-system-test --depth=1
           cd kvm-system-test
           chmod 777 sunny
           nohup ./sunny clientid $NGROK &
-          kvm --vnc :1
+          aria2c -x 16 -s 16 https://github.com/gfdgd-xi/deepin-community-live-cd/releases/download/2.0.0-iso/deepin-live-cd-commiunty-2.0.0-debian_amd64.iso
+          kvm --vnc :1 --cdrom deepin-live-cd-commiunty-2.0.0-debian_amd64.iso -m 4G -cpu host -smp 2
