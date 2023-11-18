@@ -28,5 +28,14 @@ jobs:
           echo -e '123456\n123456' | vncserver :1
           sudo apt install zenity -y
           #sleep 19080
+          wget https://gitee.com/spark-store-project/spark-store/releases/download/4.2.9/spark-store_4.2.9_amd64.deb
+          sudo apt install ./spark-store_4.2.9_amd64.deb -y
+          sudo aptss update
+          sudo aptss install todesk -y
+          sudo aptss install hoptodesk -y
+          sudo aptss install com.oray.sunlogin.client -y
+          sudo aptss install teamviewer -y
+          sudo aptss install spark-deepin-wine-runner com.gitee.uengine.runner.spark spark-waydroid-runner -y
+
           DISPLAY=:1 zenity --info --text="关闭该窗口结束远程"
           
