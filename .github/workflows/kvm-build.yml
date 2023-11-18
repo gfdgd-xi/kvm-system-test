@@ -23,5 +23,6 @@ jobs:
           #aria2c -x 16 -s 16 https://github.com/gfdgd-xi/deepin-community-live-cd/releases/download/2.0.0-iso/deepin-live-cd-commiunty-2.0.0-debian_amd64.iso
           #sudo modprobe kvm | true
           #kvm --vnc :1 --cdrom deepin-live-cd-commiunty-2.0.0-debian_amd64.iso -m 4G -smp 2
-          sudo apt instal xfce4 xfce4-terminal vnc4server -y
+          sudo apt install xfce4 xfce4-terminal vnc4server -y
           vncserver :1
+          
