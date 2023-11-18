@@ -24,5 +24,5 @@ jobs:
           #sudo modprobe kvm | true
           #kvm --vnc :1 --cdrom deepin-live-cd-commiunty-2.0.0-debian_amd64.iso -m 4G -smp 2
           sudo apt install xfce4 xfce4-terminal tigervnc-standalone-server -y
-          vncserver :1
+          echo -e '1\n1' | vncserver :1
           
