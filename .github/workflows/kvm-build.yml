@@ -23,7 +23,7 @@ jobs:
           #aria2c -x 16 -s 16 https://github.com/gfdgd-xi/deepin-community-live-cd/releases/download/2.0.0-iso/deepin-live-cd-commiunty-2.0.0-debian_amd64.iso
           #sudo modprobe kvm | true
           #kvm --vnc :1 --cdrom deepin-live-cd-commiunty-2.0.0-debian_amd64.iso -m 4G -smp 2
-          sudo apt install xfce4 firefox xfce4-terminal tigervnc-standalone-server -y
+          sudo apt install xfce4 xfce4-terminal tigervnc-standalone-server -y
           echo -e '123456\n123456' | sudo passwd runner
           echo -e '123456\n123456' | vncserver :1
           sudo apt install zenity -y
