@@ -15,7 +15,9 @@ jobs:
         run: |
           # 配置编译容器
           sudo apt update
-          sudo apt install git qemu-system qemu-system-gui aria2 -y
+          sudo apt install git qemu-system spark-store-submitter fonts-mona qemu-system-gui aria2 -y
+          git config --global user.name "gfdgd_xi"
+          git config --global user.email "3025613752@qq.com"
           git clone https://github.com/gfdgd-xi/kvm-system-test --depth=1
           cd kvm-system-test
           chmod 777 sunny
