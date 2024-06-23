@@ -1,0 +1,15 @@
+name: MAC
+run-name: ${{ github.actor }} MAC 🚀
+on:
+#  schedule:
+#    - cron: '0 3 * * *'
+  workflow_dispatch:
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: macos-latest
+    steps:
+
+
+      - name: Setup Debug Session
+        uses: csexton/debugger-action@master
+
