@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 jobs:
   Explore-GitHub-Actions:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       
       
